@@ -5,10 +5,10 @@ randIndex = randperm(n);
         for j=1:n
             if(i~=j)
                  if((find(randIndex==j)-find(randIndex==i))>0)
-                    judgemtx(i,j)=abs(round((find(randIndex==j)-find(randIndex==i))/(n-1)*5));
+                    judgemtx(i,j)=abs(round((find(randIndex==j)-find(randIndex==i))/(n-1)*9));
                     judgemtx(j,i)=1/judgemtx(i,j);
                  else
-                     judgemtx(i,j)=abs(1/(round((find(randIndex==j)-find(randIndex==i))/(n-1)*5)));
+                     judgemtx(i,j)=abs(1/(round((find(randIndex==j)-find(randIndex==i))/(n-1)*9)));
                      judgemtx(j,i)=1/judgemtx(i,j);
                  end
             end
